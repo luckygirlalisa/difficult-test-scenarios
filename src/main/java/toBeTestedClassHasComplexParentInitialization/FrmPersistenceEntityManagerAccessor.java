@@ -1,4 +1,4 @@
-package dependencyHasInitializedComplexDependencyInParent;
+package toBeTestedClassHasComplexParentInitialization;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
