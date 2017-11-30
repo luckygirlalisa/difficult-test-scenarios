@@ -3,25 +3,25 @@ package methodToBeTestedInvokeALotPrivateMethods;
 public class ClassToBeTested {
     private String flag = "initial";
 
-    public String toBeTested() {
-        boolean interAction = someActionInThisClass();
+    public String action(String updatedFlag) {
+        boolean configed = buildConfiguration();
+        updateFlag(updatedFlag);
 
-        return "Inter action excuted: " + interAction;
+        return "Configed: " + configed;
     }
 
-    private boolean someActionInThisClass() {
-
+    private boolean buildConfiguration() {
+        //Some complex logic.
         throw new UnsupportedOperationException();
     }
 
-    public String updateFlag(String updatedFlag) {
-        System.out.println("update flag is called");
-        someAction(updatedFlag);
-        return flag;
-    }
-
-    private void someAction(String updatedFlag) {
+    private void updateFlag(String updatedFlag) {
         flag = updatedFlag;
+        //More complex logic.
         throw new UnsupportedOperationException();
+    }
+
+    public String getFlag() {
+        return flag;
     }
 }
